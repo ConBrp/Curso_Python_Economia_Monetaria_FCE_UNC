@@ -28,8 +28,8 @@ TCRM["Date"] = TCRM["Mes"].astype(str) + '-' + TCRM["Año"].astype(str)
 TCRM["Date"] = pd.to_datetime(TCRM['Date'], format='%m-%Y').dt.strftime("%m-%Y")
 
 # IPC = pd.read_excel("https://www.ieric.org.ar/wp-content/uploads/2024/01/IPC-Prov-San-Luis.xlsx", header=3)[["Periodo","Nivel General"]].dropna().copy()
-IPC = pd.read_excel("https://www.ieric.org.ar/wp-content/uploads/2020/01/IPC-Prov-San-Luis.xlsx", header=3)[["Periodo","Nivel General"]].dropna().copy()
-
+# IPC = pd.read_excel("https://www.ieric.org.ar/wp-content/uploads/2020/01/IPC-Prov-San-Luis.xlsx", header=3)[["Periodo","Nivel General"]].dropna().copy()
+IPC = pd.read_excel("https://www.ieric.org.ar/wp-content/uploads/2024/05/IPC-Prov-San-Luis.xlsx", header=3)[["Periodo","Nivel General"]].dropna().copy()
 IPC["Periodo"] = pd.to_datetime(IPC["Periodo"])
 IPC["Dia"] = IPC["Periodo"].dt.day
 IPC["Mes"] = IPC["Periodo"].dt.month
